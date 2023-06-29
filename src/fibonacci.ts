@@ -3,18 +3,16 @@ export const computeFibonacciNumber = (position: number | null, recursion: boole
     if (notNullPosition === null) {
         notNullPosition = 1;
     }
+    if (notNullPosition === 1 || notNullPosition === 2) {
+        return 1;
+    }
 
     if (recursion) {
         return recursiveFibonacci(notNullPosition);
     }
 
-
     let smallFibonacciNumber = 1;
     let largeFibonacciNumber = 1;
-
-    if (notNullPosition === 1 || notNullPosition === 2) {
-        return 1;
-    }
 
     let currentPosition = 2;
     while (currentPosition < position) {
